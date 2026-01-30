@@ -5,20 +5,24 @@ The implementation includes verification via the **method of manufactured soluti
 
 ---
 
-### The Cahn–Hilliard equation
+## The Cahn–Hilliard equation
 
-We consider the Cahn–Hilliard equation on a periodic domain  
+We consider the Cahn–Hilliard equation on a periodic domain
+
 $$
 \Omega = [0,L_x)\times[0,L_y)
 $$
 
 The governing PDE is
+
 $$
 \partial_t u + \kappa \Delta^2 u - a \Delta u
 =
 \Delta\!\left(u^3 - (1+a)u\right) + g(x,y,t),
 $$
+
 where:
+
 - $u(x,y,t)$ is the concentration field,
 - $\kappa > 0$ is the interface parameter,
 - $a \ge 0$ is a splitting parameter,
@@ -26,14 +30,16 @@ where:
 
 ---
 
-### Backward Euler IMEX scheme
+## Backward Euler IMEX scheme
 
 Let $\tau$ denote the time step size and define the time grid
+
 $$
 t_n = t_0 + n\tau .
 $$
 
 The backward Euler IMEX discretization computes $u^{n+1}$ from $u^n$ using
+
 $$
 \frac{u^{n+1} - u^n}{\tau}
 + \kappa \Delta^2 u^{n+1}
@@ -43,7 +49,8 @@ $$
 \Delta\!\left((u^n)^3 - (1+a)u^n\right).
 $$
 
-The **linear terms** are treated **implicitly**, while the **nonlinear term** is treated **explicitly**.
+The linear terms are treated implicitly, while the nonlinear term is treated explicitly.
+
 
 ---
 

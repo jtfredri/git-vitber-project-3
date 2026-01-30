@@ -23,22 +23,22 @@ $$
 
 where:
 
-- $u(x,y,t)$ is the concentration field,
-- $\kappa > 0$ is the interface parameter,
-- $a \ge 0$ is a splitting parameter,
-- $g(x,y,t)$ is a prescribed source term.
+- $(u(x,y,t))$ is the concentration field,
+- $(\kappa > 0)$ is the interface parameter,
+- $(a \ge 0)$ is a splitting parameter,
+- $(g(x,y,t))$ is a prescribed source term.
 
 ---
 
 ## Backward Euler IMEX scheme
 
-Let $\tau$ denote the time step size and define the time grid
+Let $(\tau)$ denote the time step size and define the time grid
 
 $$
 t_n = t_0 + n\tau .
 $$
 
-The backward Euler IMEX discretization computes $u^{n+1}$ from $u^n$ using
+The backward Euler IMEX discretization computes $(u^{n+1})$ from $(u^n)$ using
 
 $$
 \frac{u^{n+1} - u^n}{\tau}
@@ -62,46 +62,3 @@ The scheme advances the solution using a combination of:
 - **explicit** treatment of the nonlinear term.
 
 Different coefficient sets are tested and compared in terms of **stability** and **accuracy**.
-
----
-
-### Spatial discretization
-
-All spatial derivatives are approximated using **Fourier spectral methods**.  
-The solution is represented on a uniform grid, and derivatives are computed using **fast Fourier transforms (FFTs)**.
-
-Periodic boundary conditions are assumed in both spatial directions.
-
----
-
-### Manufactured solutions and convergence
-
-To verify the implementation, the **method of manufactured solutions** is used.  
-An analytical solution $u(x,y,t)$ is prescribed, and the corresponding source term $g(x,y,t)$ is computed symbolically.
-
-Convergence studies in time are then performed while keeping the spatial resolution fixed.
-
----
-
-### Diagnostics
-
-The following physical quantities are monitored during the simulations:
-- Total mass
-- Mixing energy
-- Interfacial energy
-- Total free energy
-
-These quantities are used to verify **mass conservation** and **energy dissipation** properties of the numerical schemes.
-
----
-
-### Numerical experiments
-
-The notebook includes numerical experiments demonstrating:
-- Time convergence of the backward Euler and IMEX schemes
-- Comparison of different IMEX coefficient sets
-- Spinodal decomposition from random initial data
-- Long–time coarsening and Ostwald ripening
-- Mass conservation and energy decay
-
-Animations of the solution evolution are generated for selected experiments.

@@ -30,3 +30,11 @@ This produces a sequence $\{u^n\}_{n=0}^N$ that approximates the evolution of th
 ### Song's IMEX Runge–Kutta Scheme
 
 In addition to backward Euler, a three–stage IMEX Runge–Kutta scheme is implemented, it is named after the researcher Song, who developed a family of IMEX Runge–Kutta methods designed for stability and efficiency in time-dependent PDEs. The scheme advances the solution using a combination of implicit treatment of the linear stiff terms and explicit treatment of the nonlinear term. Different coefficient sets are tested and compared in terms of stability and accuracy.
+
+### Reference
+
+Song, H. (2016). *Energy SSP-IMEX Runge–Kutta methods for the Cahn–Hilliard equation*.  
+Journal of Computational and Applied Mathematics, 292, 576–590.  
+https://www.sciencedirect.com/science/article/pii/S0377042715003921
+
+

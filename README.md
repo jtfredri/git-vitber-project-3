@@ -27,6 +27,6 @@ Because the linear operator involves fourth and second derivatives, solving for 
 We start from the initial concentration $u^0$ and apply this step repeatedly: for $n = 0, 1, \dots, N-1$ we compute $u^{n+1}$ from $u^n$ using the backward Euler IMEX rule.  
 This produces a sequence $\{u^n\}_{n=0}^N$ that approximates the evolution of the concentration field.
 
-### Song IMEX Runge–Kutta Scheme
+### Song's IMEX Runge–Kutta Scheme
 
-In addition to backward Euler, a three–stage IMEX Runge–Kutta scheme proposed by Song is implemented. The scheme advances the solution using a combination of implicit treatment of the linear stiff terms and explicit treatment of the nonlinear term. Different coefficient sets are tested and compared in terms of stability and accuracy.
+In addition to backward Euler, a three–stage IMEX Runge–Kutta scheme is implemented, it is named after the researcher Song, who developed a family of IMEX Runge–Kutta methods designed for stability and efficiency in time-dependent PDEs. The scheme advances the solution using a combination of implicit treatment of the linear stiff terms and explicit treatment of the nonlinear term. Different coefficient sets are tested and compared in terms of stability and accuracy.
